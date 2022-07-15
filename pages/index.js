@@ -1,4 +1,5 @@
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
+import NFTList from '../components/NFTList';
 
 export default function Home() {
   const address = useAddress();
@@ -10,6 +11,7 @@ export default function Home() {
         <>
           <button onClick={disconnectWallet}>Disconnect Wallet</button>
           <p>Your address: {address}</p>
+          <NFTList/>
         </>
       ) : (
         <button onClick={connectWithMetamask}>Connect with Metamask</button>
